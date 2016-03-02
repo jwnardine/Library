@@ -20,5 +20,10 @@
             return $this->author;
         }
 
+        function getId()
+        {
+            return $this->id;
+        }
+
     }
 ?>

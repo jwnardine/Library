@@ -27,18 +27,29 @@
             $this->assertEquals($author, $result);
         }
 
-    //     function testSetAuthor()
-    //    {
-    //        //Arrange
-    //        $author = "Matt";
-    //        $completed = true;
-    //        $due_date = "2016-02-23";
-    //        $test_task = new Task($description, $completed, $due_date);
-    //        //Act
-    //        $test_task->setDescription("Drink coffee.");
-    //        $result = $test_task->getDescription();
-    //        //Assert
-    //        $this->assertEquals("Drink coffee.", $result);
-    //    }
+        function testSetAuthor()
+        {
+           //Arrange
+           $author = "Matt";
+           $test_author = new Author($author);
+           //Act
+           $test_author->setAuthor("Matt");
+           $result = $test_author->getAuthor();
+           //Assert
+           $this->assertEquals("Matt", $result);
+        }
+
+       function testGetId()
+        {
+            //Arrange
+            $author = "Matt";
+            $id = 1;
+
+            $test_author = new Author($author, $id);
+            //Act
+            $result = $test_author->getId();
+            //Assert
+            $this->assertEquals(1, $result);
+        }
     }
 ?>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/styles.css'>
+    <meta charset="utf-8">
+    <title>Author Edit</title>
+  </head>
+  <body>
+      <h1>Update the {{ author.getAuthor_Name }} Author</h1>
+
+      <form action="/authors/{{ author.getId }}" method="post">
+        <input name="_method" type="hidden" value ="patch">
+
+        <label for="author_name">Rename this author</label>
+        <input id="author_name" name="author_name" type="text">
+
+        <button type="submit">Update</button>
+      </form>
+
+      <form action="/authors/{{ author.getId }}" method="post">
+        <input name="_method" type="hidden" value="delete">
+
+        <button type="submit">Delete this author!</button>
+      </form>
+  </body>
+</html>

@@ -100,7 +100,7 @@
                 $id = $returned_book['id'];
                 $new_book = new Book($title, $id);
                 array_push($books, $new_book);
-          }
+            }
           return $books;
         }
     }
